@@ -4,14 +4,60 @@
     background: black;
     margin: 50px auto;
     border: 5px solid black;
-    -webkit-animation: bgChange 2s 2s alternate infinite;
-    transition: all 2s ease;
 }
 
-/*#result {
-    width: 280px;
-    height: 70px;
+#source {
+    width: 560px;
+    height: 200px;
     display: block;
-    margin: 10px auto;
+    margin: 20px auto;
+    margin-left: 20px;
     background: white;
-}*/
+    float: left;
+}
+
+#result {
+    width: 560px;
+    height: 200px;
+    display: block;
+    margin: 20px auto;
+    margin-right: 20px;
+    background: white;
+    position:relative;
+    float: right;
+}
+
+#text1 {
+    width: 510px;
+    height: 130px;
+    display: block;
+    border: 2px solid black;
+    margin: 20px auto;
+    margin-left: 20px;
+}
+
+#text2 {
+    width: 520px;
+    height: 130px;
+    display: block;
+    border: 2px solid black;
+    margin: 20px auto;
+    margin-right: 20px;
+    background: white;
+    position: relative;
+}
+
+#keyboard {
+    width: 800px;
+    height: 250px;
+    margin: 260px;
+    margin-left: 200px;
+    background: white;
+}
+
+p {
+    color: black;
+    font-size: 20px;
+    margin: 5px;
+    margin-left: 5px;
+}
