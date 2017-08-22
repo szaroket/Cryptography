@@ -1,6 +1,7 @@
 ﻿#background {
     width: 1200px;
-    height: 800px;
+    height: 700px;
+    border-radius: 8px;
     background: black;
     margin: 50px auto;
     border: 5px solid black;
@@ -9,6 +10,7 @@
 #source {
     width: 560px;
     height: 200px;
+    border-radius: 8px;
     display: block;
     margin: 20px auto;
     margin-left: 20px;
@@ -19,17 +21,19 @@
 #result {
     width: 560px;
     height: 200px;
+    border-radius: 8px;
     display: block;
     margin: 20px auto;
     margin-right: 20px;
     background: white;
-    position:relative;
+    position: relative;
     float: right;
 }
 
 #text1 {
     width: 510px;
     height: 130px;
+    border-radius: 8px;
     display: block;
     border: 2px solid black;
     margin: 20px auto;
@@ -39,6 +43,7 @@
 #text2 {
     width: 520px;
     height: 130px;
+    border-radius: 8px;
     display: block;
     border: 2px solid black;
     margin: 20px auto;
@@ -47,12 +52,17 @@
     position: relative;
 }
 
+textarea {
+    resize: none;
+}
+
 #keyboard {
-    width: 800px;
-    height: 250px;
+    width: 700px;
+    height: 220px;
     margin: 260px;
-    margin-left: 200px;
+    margin-left: 250px;
     background: white;
+    border-radius: 6px;
 }
 
 p {
@@ -60,4 +70,47 @@ p {
     font-size: 20px;
     margin: 5px;
     margin-left: 5px;
+}
+
+.button {
+    border-radius: 8px;
+    font-size: 12px;
+    background-color: #e0e0d1;
+    width: 40px;
+    height: 40px;
+    margin: 2px 2px 2px 2px;
+    text-align: center;
+}
+
+.tab {
+    width: 70px;
+}
+
+.delete {
+    width: 70px;
+}
+
+.enter {
+    padding-left: 17px;
+    padding-right: 17px;
+}
+
+.return {
+    width: 77px;
+}
+
+.caps {
+    width: 80px;
+}
+
+.shiftLeft {
+    width: 95px;
+}
+
+.shiftRight {
+    width: 109px;
+}
+
+.space {
+    width: 696px;
 }
