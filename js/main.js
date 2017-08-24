@@ -1,13 +1,14 @@
 // JavaScript source code
 $(document).ready(function () {
-    //after page refresh - textarea is empty
-    $('#text1, input[type=text]').val('')
     var textBefore = $('#text1');
     var capslock = false;
     var shift = false;
     var i;
 
-    $('button').click(function () {
+    //after page refresh - textarea is empty
+    $('#text1, input[type=text]').val('')
+    
+    $('button').on('click',function () {
         var letter = $(this).text();
         
         if (this.id == "return") {
@@ -16,28 +17,47 @@ $(document).ready(function () {
         if (this.id == "tab") {
             letter = '\t';
         }
+
+        //delete last sigh from text
+        if (this.id == 'delete') {
+            var count = $('#text1').val().length;
+
+            textBefore.val($('#text1').val().substr(0, count - 1));
+            return false;
+        }
+
+        //change size one letter after clicked shift
+        //and special sighs turn on
         if (this.id == 'shiftL' || this.id == 'shiftR') {
             for (i = 1; i < 26; i++) {
                 $("#letter" + i).attr("id", "uppercase");
             }
-            shift = (shift === true) ? false : true;
-            capslock = false;
             return false;
         }
+
+        //change size of letters after clicked capslock
         if (this.id == 'caps') {
-            for (i = 1; i < 26; i++) {
-                $("#letter" + i).attr("id", "uppercase");
+            capslock = (capslock === true) ? false : true;
+            if (capslock == true) {
+                for (i = 1; i < 26; i++) {
+                    $("#letter" + i).attr("id", "uppercase");
+                }
+            } else if (capslock == false) {
+                for (i = 1; i < 26; i++) {
+                    $("#uppercase").attr("id", "letter" + i);
+                }
             }
-            capslock = true;
             return false;
         }
+
+        //change letter to uppercase letters
         if (this.id == "uppercase") {
             letter = letter.toUpperCase();
         }
 
         //write letter from clicked button
-        textBefore[0].value += letter;
-        
+        textBefore.val(textBefore.val() + letter);
+
         //clear the textarea
         if (this.id == "clear") {
             $('textarea, input[type=text]').val('')
