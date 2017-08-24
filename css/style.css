@@ -59,7 +59,7 @@ textarea {
 #keyboard {
     width: 700px;
     height: 220px;
-    margin: 260px;
+    margin-top: 260px;
     margin-left: 250px;
     background: white;
     border-radius: 6px;
@@ -113,4 +113,10 @@ p {
 
 .space {
     width: 696px;
+}
+
+.clear {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 70px;
 }
