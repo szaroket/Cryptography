@@ -33,7 +33,21 @@ $(document).ready(function () {
             for (i = 1; i < 26; i++) {
                 $("#letter" + i).attr("id", "uppercase");
             }
+            shift = true;
             return false;
+        }
+
+        //after write one uppercase letter
+        //write small letters
+        if (shift == true) {
+            //change letter to uppercase letters
+            if (this.id == "uppercase") {
+                letter = letter.toUpperCase();
+            }
+            for (i = 1; i < 26; i++) {
+                $("#uppercase").attr("id", "letter" + i);
+            }
+            shift = false;
         }
 
         //change size of letters after clicked capslock
@@ -59,6 +73,7 @@ $(document).ready(function () {
         //clear the textarea
         if (this.id == "clear") {
             $('textarea, input[type=text]').val('')
+            return false;
         }
 
         //write letter from clicked button
