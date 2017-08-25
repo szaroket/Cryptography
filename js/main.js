@@ -30,10 +30,18 @@ $(document).ready(function () {
         //change size one letter after clicked shift
         //and special sighs turn on
         if (this.id == 'shiftL' || this.id == 'shiftR') {
-            for (i = 1; i < 26; i++) {
-                $("#letter" + i).attr("id", "uppercase");
+            shift = (shift === true) ? false : true;
+            if (shift == true) {
+                for (i = 1; i < 26; i++) {
+                    $("#letter" + i).attr("id", "uppercase");
+                }
+                changeValue();
+            } else if (shift == false) {
+                for (i = 1; i < 26; i++) {
+                    $("#uppercase").attr("id", "letter" + i);
+                }
+                changeValue();
             }
-            shift = true;
             return false;
         }
 
@@ -46,6 +54,7 @@ $(document).ready(function () {
             }
             for (i = 1; i < 26; i++) {
                 $("#uppercase").attr("id", "letter" + i);
+                changeValue();
             }
             shift = false;
         }
