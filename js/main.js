@@ -8,7 +8,8 @@ $(document).ready(function () {
     //after page refresh - textarea is empty
     $('#text1, input[type=text]').val('')
     
-    $('button').on('click',function () {
+    $('button').on('click', function () {
+
         var letter = $(this).text();
         
         if (this.id == "return") {
@@ -55,12 +56,12 @@ $(document).ready(function () {
             letter = letter.toUpperCase();
         }
 
-        //write letter from clicked button
-        textBefore.val(textBefore.val() + letter);
-
         //clear the textarea
         if (this.id == "clear") {
             $('textarea, input[type=text]').val('')
         }
+
+        //write letter from clicked button
+        textBefore.val(textBefore.val() + letter);   
     });
 });
