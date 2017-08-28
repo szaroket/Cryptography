@@ -54,8 +54,8 @@ $(document).ready(function () {
             }
             for (i = 1; i < 27; i++) {
                 $("#uppercase").attr("id", "letter" + i);
-                changeValue();
             }
+            changeValue();
             shift = false;
         }
 
