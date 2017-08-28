@@ -32,12 +32,12 @@ $(document).ready(function () {
         if (this.id == 'shiftL' || this.id == 'shiftR') {
             shift = (shift === true) ? false : true;
             if (shift == true) {
-                for (i = 1; i < 26; i++) {
+                for (i = 1; i < 27; i++) {
                     $("#letter" + i).attr("id", "uppercase");
                 }
                 changeValue();
             } else if (shift == false) {
-                for (i = 1; i < 26; i++) {
+                for (i = 1; i < 27; i++) {
                     $("#uppercase").attr("id", "letter" + i);
                 }
                 changeValue();
@@ -52,7 +52,7 @@ $(document).ready(function () {
             if (this.id == "uppercase") {
                 letter = letter.toUpperCase();
             }
-            for (i = 1; i < 26; i++) {
+            for (i = 1; i < 27; i++) {
                 $("#uppercase").attr("id", "letter" + i);
                 changeValue();
             }
@@ -63,14 +63,18 @@ $(document).ready(function () {
         if (this.id == 'caps') {
             capslock = (capslock === true) ? false : true;
             if (capslock == true) {
-                for (i = 1; i < 26; i++) {
+                for (i = 1; i < 27; i++) {
                     $("#letter" + i).attr("id", "uppercase");
                 }
             } else if (capslock == false) {
-                for (i = 1; i < 26; i++) {
+                for (i = 1; i < 27; i++) {
                     $("#uppercase").attr("id", "letter" + i);
                 }
             }
+            return false;
+        }
+
+        if (this.id == "encoding") {
             return false;
         }
 
@@ -81,11 +85,20 @@ $(document).ready(function () {
 
         //clear the textarea
         if (this.id == "clear") {
-            $('textarea, input[type=text]').val('')
+            $('#text1, input[type=text]').val('')
             return false;
         }
 
         //write letter from clicked button
         textBefore.val(textBefore.val() + letter);   
+    });
+
+    $('#caeser').click(function () {
+        $('button').on('click', function () {
+            if (this.id == "encoding") {
+                caesarCipher();
+                return false;
+            }
+        });
     });
 });

@@ -33,6 +33,7 @@
 #text1 {
     width: 510px;
     height: 130px;
+    font-size: 18px;
     border-radius: 8px;
     display: block;
     border: 2px solid black;
@@ -43,6 +44,7 @@
 #text2 {
     width: 520px;
     height: 130px;
+    font-size: 18px;
     border-radius: 8px;
     display: block;
     border: 2px solid black;
@@ -126,6 +128,15 @@ p {
 }
 
 .clear {
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 120px;
+    height: 60px;
+    float: left;
+    font-size: 18px;
+}
+
+.encoding {
     margin-top: 20px;
     margin-left: 20px;
     width: 120px;

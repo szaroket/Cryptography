@@ -15,7 +15,7 @@
         </div>
         <div id="result">
             <p>After encoding</p>
-            <textarea disabled id="text2">Something</textarea>
+            <textarea disabled id="text2">The encoded message will appear here</textarea>
         </div>
         <div id="keyboard">
             <button class="button" id="special1">`</button>
@@ -62,11 +62,11 @@
             <button class="button shiftLeft" id="shiftL">Shift</button>
             <button class="button" id="letter20">z</button>
             <button class="button" id="letter21">x</button>
-            <button class="button" id="letter21">c</button>
-            <button class="button" id="letter22">v</button>
-            <button class="button" id="letter23">b</button>
-            <button class="button" id="letter24">n</button>
-            <button class="button" id="letter25">m</button>
+            <button class="button" id="letter22">c</button>
+            <button class="button" id="letter23">v</button>
+            <button class="button" id="letter24">b</button>
+            <button class="button" id="letter25">n</button>
+            <button class="button" id="letter26">m</button>
             <button class="button" id="special19">,</button>
             <button class="button" id="special20">.</button>
             <button class="button" id="special21">/</button>
@@ -76,15 +76,16 @@
         <div id="coding">
             <button class="button clear" id="clear">CLEAR TEXTAREA</button>
             <p id="formular">CHOOSE A CODE:</p>
-            <form>
-                <input type="radio" name="gender" value="male"> Caesar cipher
-                <input type="radio" name="gender" value="female"> Vigenère cipher
-                <input type="radio" name="gender" value="other"> Bacon's cipher
+            <form id="myForm">
+                <input type="radio" name="gender" value="male" id="caeser"> Caesar cipher
+                <input type="radio" name="gender" value="female" id="vigenere"> Vigenere cipher
+                <input type="radio" name="gender" value="other" id="bacon"> Bacon's cipher
             </form> 
-            <button class="button clear" id="clear">ENCODING</button>
+            <button class="button encoding" id="encoding">ENCODING</button>
         </div>
     </div>
     <script src="js/main.js"></script>
     <script src="js/changeValue.js"></script>
+    <script src="js/caesarCipher.js"></script>
 </body>
 </html>
