@@ -101,4 +101,13 @@ $(document).ready(function () {
             }
         });
     });
+
+    $('#bacon').click(function () {
+        $('button').on('click', function () {
+            if (this.id == "encoding") {
+                baconCipher();
+                return false;
+            }
+        });
+    });
 });
