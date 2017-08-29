@@ -110,4 +110,13 @@ $(document).ready(function () {
             }
         });
     });
+
+    $('#solitaire').click(function () {
+        $('button').on('click', function () {
+            if (this.id == "encoding") {
+                solitaireCipher();
+                return false;
+            }
+        });
+    });
 });
