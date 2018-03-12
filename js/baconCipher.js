@@ -1,5 +1,5 @@
 function baconCipher() {
-    var cipher = {
+  var cipher = {
         A: 'AAAAA',
         a: 'aaaaa',
         B: 'AAAAB',
@@ -52,23 +52,22 @@ function baconCipher() {
         y: 'babba',
         Z: 'BABBB',
         z: 'babbb'
+    },
+    str = document.getElementById("text1").value,
+    newStr = "",
+    k = 0,
+    c = "",
+    output = "";
+
+  for (k = 0; k < (str.length); k++) {
+    c = str[k];
+
+    if (cipher[c] != undefined) {
+      newStr = cipher[c];
+    } else {
+      newStr = c;
     }
-    var str = document.getElementById("text1").value;
-    var newStr = null;
-    var k;
-    var output = '';
-
-    for (k = 0; k < (str.length); k++) {
-        var c = str[k];
-
-        if (cipher[c] != undefined) {
-            newStr = cipher[c];
-        } else {
-            newStr = c;
-        }
-
-        output += newStr;
-    }
-
-    document.getElementById("text2").innerHTML = output;
+    output += newStr;
+  }
+  document.getElementById("text2").innerHTML = output;
 }
