@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
-    <div id="background">  
+    <div id="background">
         <div id="source">
             <p>Before encoding</p>
             <textarea id="text1"></textarea>
@@ -18,73 +18,73 @@
             <textarea disabled id="text2">The encoded message will appear here</textarea>
         </div>
         <div id="keyboard">
-            <button class="button" id="special1">`</button>
-            <button class="button" id="special2">1</button>
-            <button class="button" id="special3">2</button>
-            <button class="button" id="special4">3</button>
-            <button class="button" id="special5">4</button>
-            <button class="button" id="special6">5</button>
-            <button class="button" id="special7">6</button>
-            <button class="button" id="special8">7</button>
-            <button class="button" id="special9">8</button>
-            <button class="button" id="special10">9</button>
-            <button class="button" id="special11">0</button>
-            <button class="button" id="special12">-</button>
-            <button class="button" id="special13">=</button>
-            <button class="button delete" id="delete">Delete</button>
-            <button class="button tab" id="tab">Tab</button>
-            <button class="button" id="letter1">q</button>
-            <button class="button" id="letter2">w</button>
-            <button class="button" id="letter3">e</button>
-            <button class="button" id="letter4">r</button>
-            <button class="button" id="letter5">t</button>
-            <button class="button" id="letter6">y</button>
-            <button class="button" id="letter7">u</button>
-            <button class="button" id="letter8">i</button>
-            <button class="button" id="letter9">o</button>
-            <button class="button" id="letter10">p</button>
-            <button class="button" id="special14">[</button>
-            <button class="button" id="special15">]</button>
-            <button class="button" id="special16">\</button>
-            <button class="button caps" id="caps">Caps Lock</button>
-            <button class="button" id="letter11">a</button>
-            <button class="button" id="letter12">s</button>
-            <button class="button" id="letter13">d</button>
-            <button class="button" id="letter14">f</button>
-            <button class="button" id="letter15">g</button>
-            <button class="button" id="letter16">h</button>
-            <button class="button" id="letter17">j</button>
-            <button class="button" id="letter18">k</button>
-            <button class="button" id="letter19">l</button>
-            <button class="button" id="special17">;</button>
-            <button class="button" id="special18">'</button>
-            <button class="button return" id="return">Return</button>
-            <button class="button shiftLeft" id="shiftL">Shift</button>
-            <button class="button" id="letter20">z</button>
-            <button class="button" id="letter21">x</button>
-            <button class="button" id="letter22">c</button>
-            <button class="button" id="letter23">v</button>
-            <button class="button" id="letter24">b</button>
-            <button class="button" id="letter25">n</button>
-            <button class="button" id="letter26">m</button>
-            <button class="button" id="special19">,</button>
-            <button class="button" id="special20">.</button>
-            <button class="button" id="special21">/</button>
-            <button class="button shiftRight" id="shiftR">Shift</button>
-            <button class="button space"> </button>
+            <button class="button" id="special1" onclick="keyAction(this.id)">`</button>
+            <button class="button" id="special2" onclick="keyAction(this.id)">1</button>
+            <button class="button" id="special3" onclick="keyAction(this.id)">2</button>
+            <button class="button" id="special4" onclick="keyAction(this.id)">3</button>
+            <button class="button" id="special5" onclick="keyAction(this.id)">4</button>
+            <button class="button" id="special6" onclick="keyAction(this.id)">5</button>
+            <button class="button" id="special7" onclick="keyAction(this.id)">6</button>
+            <button class="button" id="special8" onclick="keyAction(this.id)">7</button>
+            <button class="button" id="special9" onclick="keyAction(this.id)">8</button>
+            <button class="button" id="special10" onclick="keyAction(this.id)">9</button>
+            <button class="button" id="special11" onclick="keyAction(this.id)">0</button>
+            <button class="button" id="special12" onclick="keyAction(this.id)">-</button>
+            <button class="button" id="special13" onclick="keyAction(this.id)">=</button>
+            <button class="button delete" id="delete" onclick="keyAction(this.id)">Delete</button>
+            <button class="button tab" id="tab" onclick="keyAction(this.id)">Tab</button>
+            <button class="button" id="letter1" onclick="keyAction(this.id)">q</button>
+            <button class="button" id="letter2" onclick="keyAction(this.id)">w</button>
+            <button class="button" id="letter3" onclick="keyAction(this.id)">e</button>
+            <button class="button" id="letter4" onclick="keyAction(this.id)">r</button>
+            <button class="button" id="letter5" onclick="keyAction(this.id)">t</button>
+            <button class="button" id="letter6" onclick="keyAction(this.id)">y</button>
+            <button class="button" id="letter7" onclick="keyAction(this.id)">u</button>
+            <button class="button" id="letter8" onclick="keyAction(this.id)">i</button>
+            <button class="button" id="letter9" onclick="keyAction(this.id)">o</button>
+            <button class="button" id="letter10" onclick="keyAction(this.id)">p</button>
+            <button class="button" id="special14" onclick="keyAction(this.id)">[</button>
+            <button class="button" id="special15" onclick="keyAction(this.id)">]</button>
+            <button class="button" id="special16" onclick="keyAction(this.id)">\</button>
+            <button class="button caps" id="caps" onclick="keyAction(this.id)">Caps Lock</button>
+            <button class="button" id="letter11" onclick="keyAction(this.id)">a</button>
+            <button class="button" id="letter12" onclick="keyAction(this.id)">s</button>
+            <button class="button" id="letter13" onclick="keyAction(this.id)">d</button>
+            <button class="button" id="letter14" onclick="keyAction(this.id)">f</button>
+            <button class="button" id="letter15" onclick="keyAction(this.id)">g</button>
+            <button class="button" id="letter16" onclick="keyAction(this.id)">h</button>
+            <button class="button" id="letter17" onclick="keyAction(this.id)">j</button>
+            <button class="button" id="letter18" onclick="keyAction(this.id)">k</button>
+            <button class="button" id="letter19" onclick="keyAction(this.id)">l</button>
+            <button class="button" id="special17" onclick="keyAction(this.id)">;</button>
+            <button class="button" id="special18" onclick="keyAction(this.id)">'</button>
+            <button class="button return" id="return" onclick="keyAction(this.id)">Return</button>
+            <button class="button shiftLeft" id="shiftL" onclick="keyAction(this.id)">Shift</button>
+            <button class="button" id="letter20" onclick="keyAction(this.id)">z</button>
+            <button class="button" id="letter21" onclick="keyAction(this.id)">x</button>
+            <button class="button" id="letter22" onclick="keyAction(this.id)">c</button>
+            <button class="button" id="letter23" onclick="keyAction(this.id)">v</button>
+            <button class="button" id="letter24" onclick="keyAction(this.id)">b</button>
+            <button class="button" id="letter25" onclick="keyAction(this.id)">n</button>
+            <button class="button" id="letter26" onclick="keyAction(this.id)">m</button>
+            <button class="button" id="special19" onclick="keyAction(this.id)">,</button>
+            <button class="button" id="special20" onclick="keyAction(this.id)">.</button>
+            <button class="button" id="special21" onclick="keyAction(this.id)">/</button>
+            <button class="button shiftRight" id="shiftR" onclick="keyAction(this.id)">Shift</button>
+            <button class="button space" onclick="keyAction(this.id)"> </button>
         </div>
         <div id="coding">
-            <button class="button clear" id="clear">CLEAR TEXTAREA</button>
+            <button class="button clear" id="clear" onclick="eraseText()">CLEAR TEXTAREA</button>
             <p id="formular">CHOOSE A CODE:</p>
             <form id="myForm">
                 <input type="radio" name="gender" value="male" id="caeser"> Caesar cipher
                 <input type="radio" name="gender" value="female" id="solitaire"> Solitaire cipher
                 <input type="radio" name="gender" value="other" id="bacon"> Bacon's cipher
-            </form> 
+            </form>
             <button class="button encoding" id="encoding">ENCODING</button>
         </div>
     </div>
-    <script src="js/main.js"></script>
+    <script src="js/main2.js"></script>
     <script src="js/changeValue.js"></script>
     <script src="js/caesarCipher.js"></script>
     <script src="js/baconCipher.js"></script>
