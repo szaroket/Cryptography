@@ -76,7 +76,7 @@ textarea {
 .keyboard__border {
   margin-top: 20px;
   margin-left: 130px;
-  margin-right: 100px;
+  width: 80%;
 }
 .button {
   border-radius: 50%;
