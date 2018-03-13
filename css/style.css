@@ -6,6 +6,7 @@
   -khtml-box-sizing: border-box; /* konqueror */
   font-family: 'Special Elite';
   font-size: 22px;
+  color: white;
 }
 body {
   background-image: url("img/bg.jpg");
@@ -14,7 +15,7 @@ body {
 }
 .container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 5% 1fr 1fr;
   grid-template-rows: auto;
 }
 .header {
@@ -23,30 +24,50 @@ body {
   justify-sel: center;
 }
 .header__logo {
-  font-size: 70px;
-  color: white;
+  font-size: 90px;
   text-align: center;
   text-shadow: 2px 2px 4px #1d1d1d;
   margin-bottom: 2px;
 }
 .postscript {
-  grid-column: 4/5;
+  grid-column: 4/6;
   grid-row: 2/3;
   justify-sel: center;
 }
 .postscript__logo {
   font-family: 'Satisfy';
-  font-size: 35px;
-  color: white;
+  font-size: 45px;
   text-shadow: 2px 2px 4px #1d1d1d;
   margin-top: 1px;
 }
-.source {
+.column-left {
   grid-column: 2/3;
   grid-row: 3/4;
   justify-sel: center;
 }
-
+.column-right {
+  grid-column: 4/5;
+  grid-row: 3/4;
+  justify-sel: center;
+}
+.title {
+  font-size: 35px;
+  text-align: center;
+  text-shadow: 2px 2px 4px #1d1d1d;
+  margin: 25px auto;
+}
+textarea {
+  display: block;
+  font-size: 18px;
+  color: black;
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  padding: 20px;
+  margin: 10px 0;
+  width: 100%;
+  background-image: linear-gradient(to bottom, #f6f6f6, #f2f2f2);
+  resize: none;
+}
 /*#result {
     width: 560px;
     height: 200px;
