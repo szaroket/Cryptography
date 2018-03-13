@@ -1,24 +1,53 @@
-﻿#background {
-    width: 1200px;
-    height: 700px;
-    border-radius: 8px;
-    background: black;
-    margin: 50px auto;
-    border: 5px solid black;
+* {
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  -moz-box-sizing: border-box; /* ff2 */
+  -ms-box-sizing: border-box; /* ie8 */
+  -webkit-box-sizing: border-box; /* safari3 */
+  -khtml-box-sizing: border-box; /* konqueror */
+  font-family: 'Special Elite';
+  font-size: 22px;
+}
+body {
+  background-image: url("img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+}
+.header {
+  grid-column: 2/5;
+  grid-row: 1/2;
+  justify-sel: center;
+}
+.header__logo {
+  font-size: 70px;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px #1d1d1d;
+  margin-bottom: 2px;
+}
+.postscript {
+  grid-column: 4/5;
+  grid-row: 2/3;
+  justify-sel: center;
+}
+.postscript__logo {
+  font-family: 'Satisfy';
+  font-size: 35px;
+  color: white;
+  text-shadow: 2px 2px 4px #1d1d1d;
+  margin-top: 1px;
+}
+.source {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  justify-sel: center;
 }
 
-#source {
-    width: 560px;
-    height: 200px;
-    border-radius: 8px;
-    display: block;
-    margin: 20px auto;
-    margin-left: 20px;
-    background: white;
-    float: left;
-}
-
-#result {
+/*#result {
     width: 560px;
     height: 200px;
     border-radius: 8px;
@@ -163,4 +192,4 @@ form {
     color: white;
     font-size: 24px;
     float: left;
-}
+}*/

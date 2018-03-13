@@ -6,83 +6,17 @@
     <title>Cryptography</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Special Elite" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
 </head>
 <body>
-    <div id="background">  
-        <div id="source">
-            <p>Before encoding</p>
-            <textarea id="text1"></textarea>
-        </div>
-        <div id="result">
-            <p>After encoding</p>
-            <textarea disabled id="text2">The encoded message will appear here</textarea>
-        </div>
-        <div id="keyboard">
-            <button class="button" id="special1">`</button>
-            <button class="button" id="special2">1</button>
-            <button class="button" id="special3">2</button>
-            <button class="button" id="special4">3</button>
-            <button class="button" id="special5">4</button>
-            <button class="button" id="special6">5</button>
-            <button class="button" id="special7">6</button>
-            <button class="button" id="special8">7</button>
-            <button class="button" id="special9">8</button>
-            <button class="button" id="special10">9</button>
-            <button class="button" id="special11">0</button>
-            <button class="button" id="special12">-</button>
-            <button class="button" id="special13">=</button>
-            <button class="button delete" id="delete">Delete</button>
-            <button class="button tab" id="tab">Tab</button>
-            <button class="button" id="letter1">q</button>
-            <button class="button" id="letter2">w</button>
-            <button class="button" id="letter3">e</button>
-            <button class="button" id="letter4">r</button>
-            <button class="button" id="letter5">t</button>
-            <button class="button" id="letter6">y</button>
-            <button class="button" id="letter7">u</button>
-            <button class="button" id="letter8">i</button>
-            <button class="button" id="letter9">o</button>
-            <button class="button" id="letter10">p</button>
-            <button class="button" id="special14">[</button>
-            <button class="button" id="special15">]</button>
-            <button class="button" id="special16">\</button>
-            <button class="button caps" id="caps">Caps Lock</button>
-            <button class="button" id="letter11">a</button>
-            <button class="button" id="letter12">s</button>
-            <button class="button" id="letter13">d</button>
-            <button class="button" id="letter14">f</button>
-            <button class="button" id="letter15">g</button>
-            <button class="button" id="letter16">h</button>
-            <button class="button" id="letter17">j</button>
-            <button class="button" id="letter18">k</button>
-            <button class="button" id="letter19">l</button>
-            <button class="button" id="special17">;</button>
-            <button class="button" id="special18">'</button>
-            <button class="button return" id="return">Return</button>
-            <button class="button shiftLeft" id="shiftL">Shift</button>
-            <button class="button" id="letter20">z</button>
-            <button class="button" id="letter21">x</button>
-            <button class="button" id="letter22">c</button>
-            <button class="button" id="letter23">v</button>
-            <button class="button" id="letter24">b</button>
-            <button class="button" id="letter25">n</button>
-            <button class="button" id="letter26">m</button>
-            <button class="button" id="special19">,</button>
-            <button class="button" id="special20">.</button>
-            <button class="button" id="special21">/</button>
-            <button class="button shiftRight" id="shiftR">Shift</button>
-            <button class="button space"> </button>
-        </div>
-        <div id="coding">
-            <button class="button clear" id="clear">CLEAR TEXTAREA</button>
-            <p id="formular">CHOOSE A CODE:</p>
-            <form id="myForm">
-                <input type="radio" name="gender" value="male" id="caeser"> Caesar cipher
-                <input type="radio" name="gender" value="female" id="solitaire"> Solitaire cipher
-                <input type="radio" name="gender" value="other" id="bacon"> Bacon's cipher
-            </form> 
-            <button class="button encoding" id="encoding">ENCODING</button>
-        </div>
+    <div class="container">
+      <div class="header">
+        <h2 class="header__logo">Cryptography</h2>
+      </div>
+      <div class="postscript">
+        <h2 class="postscript__logo">...encrypt your messages</h2>
+      </div>
     </div>
     <script src="js/main.js"></script>
     <script src="js/changeValue.js"></script>
