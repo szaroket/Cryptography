@@ -68,42 +68,48 @@ textarea {
   background-image: linear-gradient(to bottom, #f6f6f6, #f2f2f2);
   resize: none;
 }
-/*#result {
-    width: 560px;
-    height: 200px;
-    border-radius: 8px;
-    display: block;
-    margin: 20px auto;
-    margin-right: 20px;
-    background: white;
-    position: relative;
-    float: right;
+.keyboard {
+  grid-column: 2/5;
+  grid-row: 4/5;
+  justify-sel: center;
 }
-
-#text1 {
-    width: 510px;
-    height: 130px;
-    font-size: 18px;
-    border-radius: 8px;
-    display: block;
-    border: 2px solid black;
-    margin: 20px auto;
-    margin-left: 20px;
+.keyboard__border {
+  width: 730px;
+  height: 220px;
+  margin-top: 20px;
+  margin-left: 150px;
 }
-
-#text2 {
-    width: 520px;
-    height: 130px;
-    font-size: 18px;
-    border-radius: 8px;
-    display: block;
-    border: 2px solid black;
-    margin: 20px auto;
-    margin-right: 20px;
-    background: white;
-    position: relative;
+.button {
+  border-radius: 50%;
+  font-size: 12px;
+  color: black;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  margin: 2px 2px 2px 2px;
+  text-align: center;
 }
-
+.tab {
+  width: 70px;
+}
+.delete {
+  width: 70px;
+}
+.enter {
+  padding-left: 17px;
+  padding-right: 17px;
+}
+.return, .caps {
+  width: 80px;
+}
+.shiftLeft, .shiftRight {
+  width: 105px;
+}
+.space {
+  width: 730px;
+  height: 30px;
+}
+/*
 #coding {
     width: 1100px;
     height: 150px;
@@ -114,10 +120,6 @@ textarea {
     position: relative;
 }
 
-textarea {
-    resize: none;
-}
-
 #keyboard {
     width: 700px;
     height: 220px;
@@ -125,56 +127,6 @@ textarea {
     margin-left: 250px;
     background: white;
     border-radius: 6px;
-}
-
-p {
-    color: black;
-    font-size: 20px;
-    margin: 5px;
-    margin-left: 5px;
-}
-
-.button {
-    border-radius: 8px;
-    font-size: 12px;
-    background-color: #e0e0d1;
-    width: 40px;
-    height: 40px;
-    margin: 2px 2px 2px 2px;
-    text-align: center;
-}
-
-.tab {
-    width: 70px;
-}
-
-.delete {
-    width: 70px;
-}
-
-.enter {
-    padding-left: 17px;
-    padding-right: 17px;
-}
-
-.return {
-    width: 77px;
-}
-
-.caps {
-    width: 80px;
-}
-
-.shiftLeft {
-    width: 95px;
-}
-
-.shiftRight {
-    width: 109px;
-}
-
-.space {
-    width: 696px;
 }
 
 .clear {
