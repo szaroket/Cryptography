@@ -12,15 +12,19 @@ function clearTextarea() {
 }
 
 function writeSymbol(keyId) {
-
   //write letter from clicked button
   textBefore = document.getElementById("text1").value;
   letter = document.getElementById(keyId).textContent;
-  if(capslock === true) {
+  if(capslock === true || shift === true) {
     textAfter = textBefore + letter.toUpperCase();
   } else {
     textAfter = textBefore + letter;
   }
+
+  if(shift === true) {
+    turnOffShift();
+  }
+
   document.getElementById("text1").value = textAfter;
 }
 
@@ -68,4 +72,30 @@ function turnOnCapsLock() {
         }
     }
     return false;
+}
+
+function turnOnShift() {
+  shift = (shift === true) ? false : true;
+  if (shift == true) {
+      for (i = 1; i < 27; i++) {
+        document.getElementById("letter" + i).style.textTransform = "uppercase";
+      }
+      changeValue();
+  } else if (shift == false) {
+      for (i = 1; i < 27; i++) {
+        document.getElementById("letter" + i).style.textTransform = "lowercase";
+      }
+      changeValue();
+  }
+  return false;
+}
+
+//after write one uppercase letter
+//write small letters
+function turnOffShift() {
+  for (i = 1; i < 27; i++) {
+    document.getElementById("letter" + i).style.textTransform = "lowercase";
+  }
+  changeValue();
+  shift = false;
 }
