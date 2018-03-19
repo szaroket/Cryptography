@@ -4,7 +4,8 @@ var textBefore = "",
     shift = false,
     letter = "",
     i = 0,
-    count = 0;
+    count = 0,
+    cipher = '';
 
 function clearTextarea() {
   document.getElementById("text1").value = "";
@@ -98,4 +99,18 @@ function turnOffShift() {
   }
   changeValue();
   shift = false;
+}
+
+function checkCipher() {
+  cipher = document.querySelector('input[name="cipher"]:checked').value;
+  if (cipher === "caeser") {
+    caesarCipher();
+    return false;
+  } else if (cipher === "solitaire") {
+    solitaireCipher();
+    return false;
+  } else if (cipher === "bacon") {
+    baconCipher();
+    return false;
+  }
 }

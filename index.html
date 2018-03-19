@@ -89,14 +89,14 @@
         </div>
         <div class="footer center">
           <p class="footer__hseader">CHOOSE A CIPHER:</p>
-          <form>
-              <input type="radio" name="gender" value="male" id="caeser"> Caesar cipher
-              <input type="radio" name="gender" value="female" id="solitaire"> Solitaire cipher
-              <input type="radio" name="gender" value="other" id="bacon"> Bacon's cipher
+          <form id="myForm">
+              <input type="radio" name="cipher" value="caeser" id="caeser"> Caesar cipher
+              <input type="radio" name="cipher" value="solitaire" id="solitaire"> Solitaire cipher
+              <input type="radio" name="cipher" value="bacon" id="bacon"> Bacon's cipher
           </form>
         </div>
         <div class="footer right">
-          <button class="button encoding" id="encoding">ENCODING</button>
+          <button class="button encoding" id="encoding" onclick="checkCipher()">ENCODING</button>
         </div>
       </div>
     </div>

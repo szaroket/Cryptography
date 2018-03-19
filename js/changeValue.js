@@ -1,5 +1,5 @@
 function changeValue() {
-    var j;
+    var j = 1;
 
     for (j = 1; j < 22; j++) {
 
@@ -89,6 +89,6 @@ function changeValue() {
             change.innerHTML = "?";
         } else if (change.innerHTML == "?") {
             change.innerHTML = "/";
-        } 
+        }
     }
 }

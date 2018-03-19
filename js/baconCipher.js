@@ -52,21 +52,21 @@ function baconCipher() {
         y: 'babba',
         Z: 'BABBB',
         z: 'babbb'
-    }
-    var str = document.getElementById("text1").value;
-    var newStr = null;
-    var k;
-    var output = '';
+    },
+      str = document.getElementById("text1").value,
+      newStr = null,
+      k = 0,
+      c = '',
+      output = '';
 
     for (k = 0; k < (str.length); k++) {
-        var c = str[k];
+        c = str[k];
 
         if (cipher[c] != undefined) {
             newStr = cipher[c];
         } else {
             newStr = c;
         }
-
         output += newStr;
     }
 
